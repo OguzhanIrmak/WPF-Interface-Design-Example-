@@ -23,7 +23,9 @@ namespace WpfArayuz2
         public MainWindow()
         {
             InitializeComponent();
-           
+            string Date = DateTime.Now.ToString("dd.MM.yyyy");
+            string Day = DateTime.Now.ToString("dddd");
+            Resources["Date"] = string.Format("{0} {1}",Date,Day);  
         }
     }
 }
