@@ -176,16 +176,7 @@ HorizontalAlignment="Right"/>
                         </DockPanel>
                     </Border>
                 </Button>
-                
-                
-
-
-
-
             </StackPanel>
-
         </Border>
-
-
     </Grid>
 </Window>

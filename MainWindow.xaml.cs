@@ -23,6 +23,7 @@ namespace WpfArayuz2
         public MainWindow()
         {
             InitializeComponent();
+           
         }
     }
 }
