@@ -5,9 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfArayuz2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="730"
+        Title="MainWindow" Height="400" Width="750"
         MinHeight="400"
-        MinWidth="730">
+        MinWidth="750">
+
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="topButtons">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="Margin" Value="2"/>
+        </Style>
+        <Style TargetType="Image" x:Key="topButtonImages">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="DockPanel.Dock" Value="Left"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="topButtonTextBlocks">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="DockPanel.Dock" Value="Right"/>
+        </Style>
+        <Style TargetType="Border" x:Key="leftSide">
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Margin" Value="4"/>
+        </Style>
+        <Style TargetType="Image" x:Key="leftSideImages">
+            <Setter Property="Margin" Value="2,5,2,0"/>
+            <Setter Property="Width" Value="40"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="leftSideTextBlocks">
+            <Setter Property="FontSize" Value="45"/>
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+        </Style>
+
+
+    </Window.Resources>
 
     <Grid Background="Black">
         <Grid.ColumnDefinitions>
@@ -27,87 +59,54 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button HorizontalContentAlignment="Stretch" Margin="2">
+            <Button Style="{StaticResource topButtons}" >
                 <DockPanel>
-                    <Image Source="C:\Projelerim\WpfArayuz2\Images\panel.png"
-                     DockPanel.Dock="Left"
-                     Margin="5"/>
-                    <TextBlock Text="Panel" VerticalAlignment="Center"
-                     HorizontalAlignment="Left"
-                     DockPanel.Dock="Right"/>
+                    <Image Style="{StaticResource topButtonImages}" Source="C:\Projelerim\WpfArayuz2\Images\panel.png"/>
+                    <TextBlock Style="{StaticResource topButtonTextBlocks}" Text="Panel"/>
 
                 </DockPanel>
 
             </Button>
-            <Button HorizontalContentAlignment="Stretch" Grid.Column="1" Margin="2">
+            <Button Style="{StaticResource topButtons}" Grid.Column="1">
                 <DockPanel>
-                    <Image Source="C:\Projelerim\WpfArayuz2\Images\ürünler.png"
-                     DockPanel.Dock="Left"
-                     Margin="5"/>
-                    <TextBlock Text="Ürünler" VerticalAlignment="Center"
-                     HorizontalAlignment="Left"
-                     DockPanel.Dock="Right"/>
+                    <Image Style="{StaticResource topButtonImages}" Source="C:\Projelerim\WpfArayuz2\Images\ürünler.png"/>
+                    <TextBlock Style="{StaticResource topButtonTextBlocks}" Text="Ürünler"/>
 
                 </DockPanel>
 
             </Button>
-            <Button HorizontalContentAlignment="Stretch" Grid.Column="2"
-                    Margin="2">
+            <Button Style="{StaticResource topButtons}" Grid.Column="2">
                 <DockPanel>
-                    <Image Source="C:\Projelerim\WpfArayuz2\Images\satış.png"
-                     DockPanel.Dock="Left"
-                     Margin="5"/>
-                    <TextBlock Text="Satış" VerticalAlignment="Center"
-                     HorizontalAlignment="Left"
-                     DockPanel.Dock="Right"/>
+                    <Image Style="{StaticResource topButtonImages}" Source="C:\Projelerim\WpfArayuz2\Images\satış.png"/>
+                    <TextBlock Style="{StaticResource topButtonTextBlocks}" Text="Satış"/>
 
                 </DockPanel>
 
             </Button>
-
-            <Button HorizontalContentAlignment="Stretch" Grid.Column="3"
-                    Margin="2">
+            <Button Style="{StaticResource topButtons}" Grid.Column="3">
                 <DockPanel>
-                    <Image Source="C:\Projelerim\WpfArayuz2\Images\ayarlar.png"
-                DockPanel.Dock="Left"
-                Margin="5"/>
-                    <TextBlock Text="Ayarlar" VerticalAlignment="Center"
-                     HorizontalAlignment="Left"
-                     DockPanel.Dock="Right"/>
+                    <Image Style="{StaticResource topButtonImages}" Source="C:\Projelerim\WpfArayuz2\Images\ayarlar.png"/>
+                    <TextBlock Style="{StaticResource topButtonTextBlocks}" Text="Ayarlar"/>
 
                 </DockPanel>
 
             </Button>
-
-            <Button HorizontalContentAlignment="Stretch" Grid.Column="4"
-                    Margin="2">
+            <Button Style="{StaticResource topButtons}" Grid.Column="4">
                 <DockPanel>
-                    <Image Source="C:\Projelerim\WpfArayuz2\Images\task.png"
-                     DockPanel.Dock="Left"
-                     Margin="5"/>
-                    <TextBlock Text="Görevler" VerticalAlignment="Center"
-                     HorizontalAlignment="Left"
-                     DockPanel.Dock="Right"/>
+                    <Image Style="{StaticResource topButtonImages}" Source="C:\Projelerim\WpfArayuz2\Images\task.png"/>
+                    <TextBlock Style="{StaticResource topButtonTextBlocks}" Text="Görevler"/>
 
                 </DockPanel>
 
             </Button>
-
-            <Button HorizontalContentAlignment="Stretch" Grid.Column="5"
-                    Margin="2">
+            <Button Style="{StaticResource topButtons}" Grid.Column="5">
                 <DockPanel>
-                    <Image Source="C:\Projelerim\WpfArayuz2\Images\kullanıcılar.png"
-                     DockPanel.Dock="Left"
-                     Margin="5"/>
-                    <TextBlock Text="Kullanıcılar" VerticalAlignment="Center"
-                     HorizontalAlignment="Left"
-                     DockPanel.Dock="Right"/>
+                    <Image Style="{StaticResource topButtonImages}" Source="C:\Projelerim\WpfArayuz2\Images\kullanıcılar.png"/>
+                    <TextBlock Style="{StaticResource topButtonTextBlocks}" Text="Kullanıcılar"/>
 
                 </DockPanel>
 
             </Button>
-
-
         </Grid>
 
         <Border CornerRadius="10" BorderThickness="1" BorderBrush="White"              Margin="5">
@@ -117,7 +116,7 @@
                     HorizontalAlignment="Center"
                      Margin="5"/>
             </Viewbox>
-            
+
         </Border>
         <Border Margin="5" CornerRadius="10" Grid.Row="1">
             <Border.Background>
@@ -129,56 +128,52 @@
             </Border.Background>
             <StackPanel>
                 <Button HorizontalContentAlignment="Stretch" Margin="2">
-                    <Border CornerRadius="5" Background="White" Margin="2">
+                    <Border Style="{StaticResource leftSide}">
                         <DockPanel>
                             <StackPanel DockPanel.Dock="Left">
-                                <Image Source="C:\Projelerim\WpfArayuz2\Images\kategoriler.png" HorizontalAlignment="Left" Width="40"              Margin="2 5 2 0"/>
+                                <Image Style="{StaticResource leftSideImages}" Source="C:\Projelerim\WpfArayuz2\Images\kategoriler.png" HorizontalAlignment="Left"/>
                                 <TextBlock Text="Kategoriler" Margin="2"/>
                             </StackPanel>
-                            <TextBlock Text="77" FontSize="45"                           Foreground="Gray"
-                              HorizontalAlignment="Right"/>
+                            <TextBlock Style="{StaticResource                                  leftSideTextBlocks}" Text="77"/>
 
                         </DockPanel>
                     </Border>
                 </Button>
 
                 <Button HorizontalContentAlignment="Stretch" Margin="2">
-                    <Border CornerRadius="5" Background="White" Margin="2">
+                    <Border Style="{StaticResource leftSide}">
                         <DockPanel>
                             <StackPanel DockPanel.Dock="Left">
-                                <Image Source="C:\Projelerim\WpfArayuz2\Images\müşteriler.png" HorizontalAlignment="Left" Width="40"              Margin="2 5 2 0"/>
+                                <Image Style="{StaticResource leftSideImages}" Source="C:\Projelerim\WpfArayuz2\Images\müşteriler.png" HorizontalAlignment="Left"/>
                                 <TextBlock Text="Müşteriler" Margin="2"/>
                             </StackPanel>
-                            <TextBlock Text="500" FontSize="45"                         Foreground="Gray"
-                             HorizontalAlignment="Right"/>
+                            <TextBlock Style="{StaticResource                                  leftSideTextBlocks}" Text="500"/>
 
                         </DockPanel>
                     </Border>
                 </Button>
 
                 <Button HorizontalContentAlignment="Stretch" Margin="2">
-                    <Border CornerRadius="5" Background="White" Margin="2">
+                    <Border Style="{StaticResource leftSide}">
                         <DockPanel>
                             <StackPanel DockPanel.Dock="Left">
-                                <Image Source="C:\Projelerim\WpfArayuz2\Images\çalışanlar.png" HorizontalAlignment="Left" Width="40"               Margin="2 5 2 0"/>
+                                <Image Style="{StaticResource leftSideImages}" Source="C:\Projelerim\WpfArayuz2\Images\çalışanlar.png" HorizontalAlignment="Left"/>
                                 <TextBlock Text="Çalışanlar" Margin="2"/>
                             </StackPanel>
-                            <TextBlock Text="50" FontSize="45"                           Foreground="Gray"
-                              HorizontalAlignment="Right"/>
+                            <TextBlock Style="{StaticResource leftSideTextBlocks}" Text="50"/>
 
                         </DockPanel>
                     </Border>
                 </Button>
 
                 <Button HorizontalContentAlignment="Stretch" Margin="2">
-                    <Border CornerRadius="5" Background="White" Margin="2">
+                    <Border Style="{StaticResource leftSide}">
                         <DockPanel>
                             <StackPanel DockPanel.Dock="Left">
-                                <Image Source="C:\Projelerim\WpfArayuz2\Images\ürünlersol.png" HorizontalAlignment="Left" Width="40"                 Margin="2 5 2 0"/>
+                                <Image Style="{StaticResource leftSideImages}" Source="C:\Projelerim\WpfArayuz2\Images\ürünlersol.png" HorizontalAlignment="Left"/>
                                 <TextBlock Text="Ürünler" Margin="2"/>
                             </StackPanel>
-                            <TextBlock Text="900" FontSize="45"                            Foreground="Gray"
-                                HorizontalAlignment="Right"/>
+                            <TextBlock Style="{StaticResource leftSideTextBlocks}" Text="900"/>
 
                         </DockPanel>
                     </Border>
